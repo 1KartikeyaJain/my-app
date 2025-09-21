@@ -102,8 +102,8 @@ const LoginPage: React.FC = () => {
         >
           Sign In
         </button>
-        <button
-          onClick={() => setActiveTab('signUp')}
+        <a
+          href="/Sign_up"
           className={`px-6 py-2 rounded-r-lg font-bold transition-colors ${
             activeTab === 'signUp'
               ? 'bg-purple-600 text-white'
@@ -111,7 +111,7 @@ const LoginPage: React.FC = () => {
           }`}
         >
           Sign Up
-        </button>
+        </a>
       </div>
 
       {/* Form - Only show for Sign In */}
@@ -181,19 +181,23 @@ const LoginPage: React.FC = () => {
 
           {/* Forgot Password Link */}
           <div className="mt-4 text-center">
-            <a href="#" className="text-purple-400 text-sm hover:text-purple-300 transition-colors">
+            <a href="/Forget_Password" className="text-purple-400 text-sm hover:text-purple-300 transition-colors">
               Forgot your password?
+            </a>
+          </div>
+          
+          {/* Sign Up Link */}
+          <div className="mt-2 text-center">
+            <span className="text-gray-400 text-sm">Don't have an account? </span>
+            <a href="/Sign_up" className="text-purple-400 text-sm hover:text-purple-300 transition-colors">
+              Sign up here
             </a>
           </div>
         </div>
       )}
 
       {/* Bottom Navigation Bar - Simplified for mobile */}
-      <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-2 flex justify-between items-center z-10">
-        <div className="text-white text-lg">≡</div>
-        <div className="text-white text-lg">○</div>
-        <div className="text-white text-lg">◀</div>
-      </div>
+     
     </div>
   );
 };

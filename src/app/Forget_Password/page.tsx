@@ -116,11 +116,19 @@ const ResetPasswordPage: React.FC = () => {
           </button>
         </form>
 
-        {/* Back Link */}
-        <div className="mt-6 text-center">
-          <a href="#" className="text-purple-400 text-sm hover:text-purple-300 transition-colors">
-            Back to Sign In
-          </a>
+        {/* Back Links */}
+        <div className="mt-6 text-center space-y-2">
+          <div>
+            <a href="/Sign_in" className="text-purple-400 text-sm hover:text-purple-300 transition-colors">
+              Back to Sign In
+            </a>
+          </div>
+          <div>
+            <span className="text-gray-400 text-sm">Don't have an account? </span>
+            <a href="/Sign_up" className="text-purple-400 text-sm hover:text-purple-300 transition-colors">
+              Sign up here
+            </a>
+          </div>
         </div>
       </div>
 

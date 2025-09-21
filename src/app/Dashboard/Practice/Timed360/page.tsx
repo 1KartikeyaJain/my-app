@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useState, useRef, useEffect } from "react";
+import Sidebar from '../../components/Sidebar';
 
 const minuteOptions = [
   { label: "1 minute", value: 1 },
@@ -43,16 +44,6 @@ const TimedPractice: React.FC = () => {
     };
   }, [active]);
 
-  // Sidebar/tabs reused
-  const sidebarItems = [
-    { name: "360OS™ Assistant" },
-    { name: "Practice", active: true, highlight: true },
-    { name: "Voice Journal" },
-    { name: "Podcasts" },
-    { name: "Community" },
-    { name: "Live Practice" },
-    { name: "Activity" },
-  ];
   const tabItems = [
     "360OS™", "Daily", "Timed 360OS™", "Guided", "Voice Journal", "Podcasts"
   ];
@@ -60,48 +51,7 @@ const TimedPractice: React.FC = () => {
   return (
     <div className="flex h-screen bg-gray-900 text-white">
       {/* Sidebar */}
-      <div className="w-64 bg-gray-800 border-r border-gray-700 flex flex-col justify-between">
-        <div>
-          <div className="p-4 border-b border-gray-700">
-            <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center">
-                <div className="w-4 h-4 border-2 border-white rounded-full"></div>
-              </div>
-              <div>
-                <div className="text-purple-400 font-semibold">Rama's 360OS™</div>
-                <div className="text-purple-300 text-sm">Experience</div>
-              </div>
-            </div>
-          </div>
-          <div className="p-4">
-            <div className="text-gray-400 text-sm font-medium mb-4">Features</div>
-            <nav className="space-y-2">
-              {sidebarItems.map((item, i) => (
-                <div
-                  key={i}
-                  className={`px-3 py-2 rounded-md text-sm cursor-pointer transition-colors ${
-                    item.highlight
-                      ? "bg-purple-600 text-white"
-                      : item.active
-                      ? "bg-gray-700 text-white"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white"
-                  }`}
-                >
-                  {item.name}
-                </div>
-              ))}
-            </nav>
-          </div>
-        </div>
-        {/* Settings */}
-        <div className="p-4 border-t border-gray-700">
-          <div className="text-gray-400 text-sm font-medium mb-4">Settings</div>
-          <div className="space-y-2">
-            <div className="px-3 py-2 text-sm text-gray-300 cursor-pointer hover:bg-gray-700 hover:text-white rounded-md">Settings</div>
-            <div className="flex items-center justify-between px-3 py-2 bg-gray-700 rounded-md"><span className="text-white text-sm">Light Mode</span></div>
-          </div>
-        </div>
-      </div>
+      <Sidebar />
       {/* Main Content */}
       <div className="flex-1 flex flex-col">
         {/* Top Header */}

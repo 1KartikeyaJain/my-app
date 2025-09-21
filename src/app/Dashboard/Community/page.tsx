@@ -1,68 +1,13 @@
 "use client";
 
 import React from 'react';
+import Sidebar from '../components/Sidebar';
 
 const Community = () => {
   return (
     <div className="flex h-screen bg-slate-900 text-white">
       {/* Left Sidebar */}
-      <div className="w-64 bg-slate-800 border-r border-slate-700">
-        {/* Logo/Header */}
-        <div className="p-4 border-b border-slate-700">
-          <div className="flex items-center space-x-2">
-            <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center">
-              <span className="text-white text-sm">⊖</span>
-            </div>
-            <span className="text-purple-400 font-medium">Rama's 3600S™</span>
-          </div>
-        </div>
-
-        {/* Navigation Menu */}
-        <div className="p-4">
-          <div className="mb-6">
-            <h3 className="text-gray-400 text-sm font-medium mb-3">Features</h3>
-            <nav className="space-y-2">
-              <button className="block text-gray-300 hover:text-white py-1 w-full text-left">
-                3600S™ Assistant
-              </button>
-              <button className="block text-gray-300 hover:text-white py-1 w-full text-left">
-                Practice
-              </button>
-              <button className="block text-gray-300 hover:text-white py-1 w-full text-left">
-                Voice Journal
-              </button>
-              <button className="block text-gray-300 hover:text-white py-1 w-full text-left">
-                Podcasts
-              </button>
-              <button className="block text-purple-400 font-medium py-1 bg-slate-700 px-2 -mx-2 rounded w-full text-left">
-                Community
-              </button>
-              <button className="block text-gray-300 hover:text-white py-1 w-full text-left">
-                Live Practice
-              </button>
-              <button className="block text-gray-300 hover:text-white py-1 w-full text-left">
-                Activity
-              </button>
-            </nav>
-          </div>
-
-          <div className="mb-6">
-            <h3 className="text-gray-400 text-sm font-medium mb-3">Settings</h3>
-            <nav>
-              <button className="block text-gray-300 hover:text-white py-1 w-full text-left">
-                Settings
-              </button>
-            </nav>
-          </div>
-        </div>
-
-        {/* Light Mode Toggle */}
-        <div className="absolute bottom-4 left-4">
-          <button className="text-gray-400 hover:text-white text-sm">
-            Light Mode
-          </button>
-        </div>
-      </div>
+      <Sidebar />
 
       {/* Main Content */}
       <div className="flex-1 flex flex-col">

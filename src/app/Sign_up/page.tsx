@@ -67,10 +67,12 @@ const SignUpPage: React.FC = () => {
         <svg width="80" height="80" viewBox="0 0 80 80" className="text-purple-300">
           {/* Diamond shape */}
           <polygon points="40,5 75,40 40,75 5,40" fill="currentColor" opacity="0.8" />
-          {/* Inner stars */}
-          <polygon points="40,20 45,25 40,30 35,25" fill="white" opacity="0.6" />
-          <circle cx="40" cy="40" r="3" fill="white" opacity="0.8" />
-          <polygon points="60,35 62,38 65,38 61,40 63,43 60,43 58,43 60,40" fill="white" opacity="0.5" />
+          {/* Inner diamond */}
+          <polygon points="40,15 60,40 40,65 20,40" fill="currentColor" opacity="0.3" />
+          {/* Stars */}
+          <polygon points="25,25 27,30 32,30 28,33 30,38 25,35 20,38 22,33 18,30 23,30" fill="white" opacity="0.6" className="animate-pulse" />
+          <polygon points="55,25 57,30 62,30 58,33 60,38 55,35 50,38 52,33 48,30 53,30" fill="white" opacity="0.4" className="animate-pulse delay-200" />
+          <circle cx="40" cy="40" r="2" fill="white" opacity="0.8" className="animate-ping" />
         </svg>
       </div>
 
@@ -156,18 +158,14 @@ const SignUpPage: React.FC = () => {
 
         {/* Back Link */}
         <div className="mt-6 text-center">
-          <a href="#" className="text-purple-400 text-sm hover:text-purple-300 transition-colors">
-            Back to Sign In
+          <span className="text-gray-400 text-sm">Already have an account? </span>
+          <a href="/Sign_in" className="text-purple-400 text-sm hover:text-purple-300 transition-colors">
+            Sign in here
           </a>
         </div>
       </div>
 
-      {/* Bottom Navigation Bar - Simplified */}
-      <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-2 flex justify-between items-center z-10">
-        <div className="text-white text-sm">≡</div>
-        <div className="text-white text-sm">○</div>
-        <div className="text-white text-sm">◀</div>
-      </div>
+      
     </div>
   );
 };
